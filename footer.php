@@ -1,8 +1,9 @@
-</div> <footer class="bg-dark text-light py-4 mt-5 border-top" style="border-color: var(--museum-gold) !important;">
+</div> 
+
+<footer class="py-4 mt-5" style="background-color: #0f0f11; border-top: 1px solid #232329;">
     <div class="container text-center">
-        <p class="museum-title mb-2" style="font-size: 1.2rem; letter-spacing: 1px;">SANAT MÜZESİ</p>
-        <p class="text-muted small mb-0">&copy; 2026 Sanat Müzesi Yönetim Sistemi. Tüm Hakları Saklıdır.</p>
-        <p class="text-muted mutual-credits mt-2" style="font-size: 0.75rem;">Bursa Teknik Üniversitesi - Bilgisayar Mühendisliği Projesi</p>
+        <p class="text-muted-custom small mb-1" style="font-weight: 500; letter-spacing: 1px;">MUSEUM DATABASE SYSTEM</p>
+        <p class="text-muted-custom mb-0" style="font-size: 0.75rem;">&copy; 2026 Tüm Hakları Saklıdır. BTU Bilgisayar Mühendisliği.</p>
     </div>
 </footer>
 
