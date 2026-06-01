@@ -11,6 +11,7 @@ Yönetim sayfalarını koruma altına alan ve yetkisiz (giriş yapmamış) kulla
 Arayüz Tasarımı ve Entegrasyon (Bootstrap Frontend):
 Kullanıcı giriş ve kayıt formlarını Bootstrap bileşenleri (Cards, Forms, Validation, Buttons) kullanarak tamamen stillendirmek ve mobil uyumlu (responsive) hale getirmek.
 Sisteme başarılı giriş yapıldığında kullanıcıyı karşılayan, müze verilerine ait temel istatistikleri barındıran şık bir yönetim paneli (Dashboard) ana sayfası tasarlamak.
+
 * Nurseza Karakaya: Koleksiyon Yönetimi ve Listeleme Modülü (Create & Read)
 Genel Sorumluluk: Müzedeki sanat eserlerinin sisteme dinamik olarak dahil edilmesi ve galeride modern bir mimariyle sergilenmesi süreçlerinin full-stack geliştirilmesini üstlenmek.
 Veritabanı ve Backend Yapılandırması :
@@ -21,6 +22,7 @@ Arayüz Tasarımı ve Entegrasyon (Bootstrap Frontend):
 Yeni eser ekleme sayfasının (eser-ekle.php) Bootstrap form elemanları, seçici menüler (<select>) ve metin alanları (<textarea>) kullanarak görsel tasarımını yapmak.
 Müze koleksiyonunun sergilendiği ana galeri sayfasını (eserler.php), Bootstrap Cards (Kart yapıları) kullanarak estetik bir düzende listelemek.
 Bootstrap Grid sistemi (row-cols-md-3) kullanarak, kartların büyük ekranlarda yan yana 3 adet listelenmesini, mobil ekranlarda ise alt alta esnek bir şekilde hizalanmasını (responsive) sağlamak.
+
 * Madina Yusupova: Veri Modifikasyonu, Sistem Entegrasyonu ve DevOps (Update, Delete & Deploy)
 Genel Sorumluluk: Mevcut verilerin yaşam döngüsünü yönetmek (düzenleme/silme), JavaScript entegrasyonlarını tamamlamak, tüm projeyi birleştirmek ve canlı sunucuya (hosting) taşımak.
 Veritabanı ve Backend Yapılandırması:
