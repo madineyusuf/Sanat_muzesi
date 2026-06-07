@@ -1,0 +1,38 @@
+CREATE TABLE kullanicilar (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kullanici_adi VARCHAR(50) NOT NULL UNIQUE,
+    email VARCHAR(100) NOT NULL UNIQUE,
+    sifre_hash VARCHAR(255) NOT NULL,
+    olusturma_tarihi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+CREATE TABLE eserler (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    eser_adi VARCHAR(255) NOT NULL,
+    sanatci VARCHAR(255) NOT NULL,
+    yil VARCHAR(50) NOT NULL,
+    tur VARCHAR(100) NOT NULL,
+    aciklama TEXT,
+    gorsel_yolu VARCHAR(255),
+    eklenme_tarihi TIMESTAMP DEFAULT CURRENT_TIMESTAMP
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+CREATE TABLE favoriler (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kullanici_id INT NOT NULL,
+    eser_id INT NOT NULL,
+    eklenme_tarihi TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (kullanici_id) REFERENCES kullanicilar(id) ON DELETE CASCADE,
+    FOREIGN KEY (eser_id) REFERENCES eserler(id) ON DELETE CASCADE,
+    UNIQUE KEY tek_favori (kullanici_id, eser_id)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
+
+CREATE TABLE yorumlar (
+    id INT AUTO_INCREMENT PRIMARY KEY,
+    kullanici_id INT NOT NULL,
+    eser_id INT NOT NULL,
+    icerik TEXT NOT NULL,
+    olusturma_tarihi TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    FOREIGN KEY (kullanici_id) REFERENCES kullanicilar(id) ON DELETE CASCADE,
+    FOREIGN KEY (eser_id) REFERENCES eserler(id) ON DELETE CASCADE
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_turkish_ci;
