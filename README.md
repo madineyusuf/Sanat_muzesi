@@ -1,6 +1,6 @@
 ## Sanat Müzesi
 
-Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, favorilerinize ekleyebileceğiniz ve yorum yapabileceğiniz bir web uygulaması.
+Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, favorilerinize ekleyebileceğiniz ve yorum yapabileceğiniz bir web uygulaması
 
 ## Canlı Site
 
