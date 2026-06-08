@@ -3,7 +3,7 @@
 Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, favorilerinize ekleyebileceğiniz ve yorum yapabileceğiniz bir web uygulaması
 
 ## Canlı Site
-
+[http://95.130.171.20/~st24360859922](http://95.130.171.20/~st24360859922)
 
 ## Ekran Görüntüleri
 
