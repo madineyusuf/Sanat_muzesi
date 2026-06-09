@@ -62,7 +62,7 @@ ALTER TABLE eserler ADD COLUMN gorsel_yolu VARCHAR(255) DEFAULT NULL;
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/starry-night.jpg' WHERE eser_adi = 'The Starry Night';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/empire-of-ligth.jpg' WHERE eser_adi = 'The Empire of Light';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/mona-lisa.jpg' WHERE eser_adi = 'Mona Lisa';
-UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/the-scream.jpg' WHERE eser_adi = 'The Scream';
+UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/scream.jpg' WHERE eser_adi = 'The Scream';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/persistence-of-memory.jpg' WHERE eser_adi = 'The Persistence of Memory';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/kaplumbaga-terbiyecisi.jpg' WHERE eser_adi = 'Kaplumbağa Terbiyecisi';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/inci-kupeli-kiz.jpg' WHERE eser_adi = 'İnci Küpeli Kız';
