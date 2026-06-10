@@ -24,26 +24,28 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <?php require_once 'includes/header.php'; ?>
 
-<div class="container mt-5" style="max-width: 450px">
-    <h2 class="mb-4">Giriş Yap</h2>
+<main class="flex-grow-1 d-flex align-items-center" style="min-height: 60vh;">
+    <div class="container" style="max-width: 450px">
+        <h2 class="mb-4">Giriş Yap</h2>
 
-    <?php if ($error): ?>
-        <div class="alert alert-danger"><?= $error ?></div>
-    <?php endif; ?>
+        <?php if ($error): ?>
+            <div class="alert alert-danger"><?= $error ?></div>
+        <?php endif; ?>
 
-    <form method="POST">
-        <div class="mb-3">
-            <label class="form-label">Kullanıcı Adı</label>
-            <input type="text" name="kullanici_adi" class="form-control" required>
-        </div>
-        <div class="mb-3">
-            <label class="form-label">Şifre</label>
-            <input type="password" name="sifre" class="form-control" required>
-        </div>
-        <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
-    </form>
+        <form method="POST">
+            <div class="mb-3">
+                <label class="form-label">Kullanıcı Adı</label>
+                <input type="text" name="kullanici_adi" class="form-control" required>
+            </div>
+            <div class="mb-3">
+                <label class="form-label">Şifre</label>
+                <input type="password" name="sifre" class="form-control" required>
+            </div>
+            <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
+        </form>
 
-    <p class="mt-3 text-center">Hesabın yok mu? <a href="register.php">Kayıt ol</a></p>
-</div>
+        <p class="mt-3 text-center">Hesabın yok mu? <a href="register.php">Kayıt ol</a></p>
+    </div>
+</main>
 
 <?php require_once 'includes/footer.php'; ?>
