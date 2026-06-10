@@ -14,14 +14,16 @@
         <a class="navbar-brand" href="/index.php"> Sanat Müzesi</a>
         <div class="ms-auto d-flex align-items-center gap-2">
             <?php if (isLoggedIn()): ?>
-                <a href="/profile.php" class="btn btn-outline-light btn-sm">
+                <a href="/Sanat_muzesi-main/profile.php" class="btn btn-outline-light btn-sm">
                     <i class="bi bi-person-circle"></i> <?= htmlspecialchars($_SESSION['kullanici_adi']) ?>
                 </a>
-                <a href="/logout.php" class="btn btn-outline-danger btn-sm">Çıkış</a>
+                <a href="/Sanat_muzesi-main/logout.php" class="btn btn-outline-danger btn-sm">Çıkış</a>
             <?php else: ?>
-                <a href="/login.php" class="btn btn-outline-light btn-sm">Giriş</a>
-                <a href="/register.php" class="btn btn-light btn-sm">Kayıt Ol</a>
+                <a href="/Sanat_muzesi-main/login.php" class="btn btn-outline-light btn-sm">Giriş</a>
+                <a href="/Sanat_muzesi-main/register.php" class="btn btn-light btn-sm">Kayıt Ol</a>
             <?php endif; ?>
         </div>
     </div>
 </nav>
+
+    
