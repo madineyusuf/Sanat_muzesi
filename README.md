@@ -18,15 +18,15 @@ Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre
 ## Ekran Görüntüleri
 
 ### Ana Sayfa
-![Ana Sayfa](assets/images/anasayfa.jpg)
+![Ana Sayfa](assets/images/anasayfa.png)
 
 ### Eser Detay Sayfası
-![Eser Detay Sayfası](assets/images/detay1.jpg)
-![Eser Detay Sayfası](assets/images/detay2.jpg)
+![Eser Detay Sayfası](assets/images/detay1.png)
+![Eser Detay Sayfası](assets/images/detay2.png)
 
 ### Kullanıcı Giriş Sayfası ve Profili
-![Kullanıcı Giriş](assets/images/giris.jpg)
-![Kullanıcı Giriş](assets/images/favori.jpg)
+![Kullanıcı Giriş](assets/images/giris.png)
+![Kullanıcı Giriş](assets/images/favori.png)
 
 ---
 
