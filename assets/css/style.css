@@ -15,17 +15,15 @@ body {
     font-family: 'Lato', sans-serif;
     font-weight: 300;
     color: #1a1a1a;
-    
     display: flex !important;
     flex-direction: column !important;
     min-height: 100% !important;
     margin: 0 !important;
 }
 
-main, .container, .flex-grow-1 {
+main, .flex-grow-1 {
     flex: 1 0 auto !important;
 }
-
 
 footer {
     flex-shrink: 0 !important;
@@ -46,9 +44,8 @@ footer {
     text-transform: uppercase;
 }
 
-/* ── YENİLENEN NAVBAR BUTONLARI ── */
 .navbar .btn-outline-light {
-    border-color: #3d523d; 
+    border-color: #3d523d;
     color: #3d523d;
     font-size: 12px;
     letter-spacing: 1px;
@@ -70,7 +67,7 @@ footer {
 }
 
 .navbar .btn-light:hover {
-    background-color: #2b3a2b; 
+    background-color: #2b3a2b;
     border-color: #2b3a2b;
 }
 
@@ -79,7 +76,7 @@ footer {
     letter-spacing: 1px;
     text-transform: uppercase;
     color: #a94442;
-    border-color: #e0d8cc; 
+    border-color: #e0d8cc;
 }
 
 .navbar .btn-outline-danger:hover {
@@ -88,7 +85,7 @@ footer {
     color: #fff;
 }
 
-/* Başlık */
+/* Başlıklar */
 h1, h2, h3, h4, h5, .navbar-brand {
     font-family: 'Playfair Display', serif;
 }
@@ -108,11 +105,11 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: #999 !important;
 }
 
-/* Müze Çizgisi */
+/* Divider */
 .green-divider {
     width: 60px;
     height: 1px;
-    background: #3d523d; 
+    background: #3d523d;
     margin: 16px auto;
 }
 
@@ -120,14 +117,14 @@ h1, h2, h3, h4, h5, .navbar-brand {
 .art-card {
     position: relative;
     cursor: pointer;
-    background: #f5f1e9; 
+    background: #f5f1e9;
     padding: 10px;
-    box-shadow: 0 2px 8px rgba(0,0,0,0.06); 
+    box-shadow: 0 2px 8px rgba(0,0,0,0.06);
     transition: box-shadow 0.3s ease, transform 0.3s ease;
 }
 
 .art-card:hover {
-    box-shadow: 0 10px 25px rgba(45,54,45,0.1); 
+    box-shadow: 0 10px 25px rgba(45,54,45,0.1);
     transform: translateY(-4px);
 }
 
@@ -142,7 +139,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
 }
 
 .art-card:hover::before {
-    border-color: rgba(61,82,61,0.5); 
+    border-color: rgba(61,82,61,0.5);
 }
 
 .art-card .img-wrapper {
@@ -156,14 +153,14 @@ h1, h2, h3, h4, h5, .navbar-brand {
     height: 100%;
     object-fit: cover;
     display: block;
-    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1); 
+    transition: transform 0.6s cubic-bezier(0.16, 1, 0.3, 1);
 }
 
 .art-card:hover img {
     transform: scale(1.04);
 }
 
-/* Favori butonu */
+/* Favori butonu (galeri kartlarında) */
 .art-card .fav-btn {
     position: absolute;
     top: 8px;
@@ -181,7 +178,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     opacity: 0;
     transform: translateY(-4px);
     transition: opacity 0.3s, transform 0.3s, background 0.2s, color 0.2s;
-    color: #b5a48c; 
+    color: #b5a48c;
     z-index: 3;
 }
 
@@ -202,7 +199,7 @@ h1, h2, h3, h4, h5, .navbar-brand {
     position: absolute;
     bottom: 0; left: 0; right: 0;
     background: rgba(255, 255, 255, 0.98);
-    border-top: 1px solid #3d523d; 
+    border-top: 1px solid #3d523d;
     padding: 12px 14px;
     transform: translateY(100%);
     transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1);
@@ -227,13 +224,12 @@ h1, h2, h3, h4, h5, .navbar-brand {
 
 .art-card .card-info p {
     font-size: 10px;
-    color: #8a8275; 
+    color: #8a8275;
     letter-spacing: 1.5px;
     text-transform: uppercase;
     margin: 0;
 }
 
-/* İncele Butonu */
 .art-card .incele-btn {
     font-size: 10px;
     letter-spacing: 1px;
@@ -255,9 +251,89 @@ h1, h2, h3, h4, h5, .navbar-brand {
     color: #fff;
 }
 
-/* ── GENEL ANA BUTONLAR (Krem/Mermer Uyumlu) ── */
+/* ── ARTWORK SAYFASI: cam efektli kart ── */
+.card.border-0.shadow-sm {
+    position: static !important;
+    overflow: visible !important;
+    transform: none !important;
+    padding: 0 !important;
+    background: rgba(255, 255, 255, 0.65) !important;
+}
+
+.card.border-0.shadow-sm::before {
+    display: none !important;
+}
+
+.card.border-0.shadow-sm:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.card.border-0.shadow-sm .card-body {
+    position: static !important;
+    transform: none !important;
+    background: transparent !important;
+    border: none !important;
+}
+
+.card.border-0.shadow-sm:hover .card-body {
+    transform: none !important;
+}
+
+/* Yorum kartları (artwork sayfası) */
+.card.mb-2 {
+    position: static !important;
+    overflow: visible !important;
+    transform: none !important;
+    padding: 0 !important;
+}
+
+.card.mb-2::before {
+    display: none !important;
+}
+
+.card.mb-2:hover {
+    transform: none !important;
+    box-shadow: none !important;
+}
+
+.card.mb-2 .card-body {
+    position: static !important;
+    transform: none !important;
+    background: rgba(255, 255, 255, 0.8) !important;
+    border: none !important;
+}
+
+.card.mb-2:hover .card-body {
+    transform: none !important;
+}
+
+/* Profil sayfası */
+.profile-card {
+    border: 1px solid #e8e0d0;
+    background: #fff;
+    padding: 0;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
+    position: static !important;
+    overflow: visible !important;
+}
+
+.profile-card::before {
+    display: none !important;
+}
+
+.profile-card:hover {
+    transform: none !important;
+}
+
+.profile-card .card-header {
+    background-color: #1a1a1a !important;
+    padding: 14px 20px;
+}
+
+/* ── GENEL BUTONLAR ── */
 .btn-primary {
-    background-color: #3d523d; 
+    background-color: #3d523d;
     border-color: #3d523d;
     border-radius: 0;
     letter-spacing: 1.5px;
@@ -357,51 +433,6 @@ h1, h2, h3, h4, h5, .navbar-brand {
 
 .alert-danger { border-left-color: #bd4b4b; color: #a94442; }
 .alert-success { border-left-color: #3d523d; color: #3d523d; }
-
-/* Yorum kartları */
-#yorumlar .card {
-    border-left: 2px solid #e8e0d0 !important;
-    border-radius: 0 !important;
-    background: #fff;
-    position: static;
-    overflow: visible;
-    box-shadow: none;
-    transform: none !important;
-    padding: 0;
-}
-
-#yorumlar .card::before { display: none; }
-
-#yorumlar .card-body {
-    position: static !important;
-    transform: none !important;
-    background: #fff;
-    border: none;
-    padding: 14px 18px;
-}
-
-#yorumlar .card:hover .card-body {
-    transform: none !important;
-}
-
-#yorumlar .card:hover {
-    border-left-color: #3d523d !important;
-    transform: none !important;
-    background-color: #faf8f4;
-}
-
-/* Profil sayfası kartları */
-.profile-card {
-    border: 1px solid #e8e0d0;
-    background: #fff;
-    padding: 0;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.02);
-}
-
-.profile-card .card-header {
-    background-color: #1a1a1a !important;
-    padding: 14px 20px;
-}
 
 /* Footer */
 footer {
