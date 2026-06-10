@@ -111,4 +111,3 @@ cp includes/db.example.php includes/db.php
 
 >  *`includes/db.php` dosyası `.gitignore` ile versiyon kontrolünden hariç tutulmuştur. Bu dosyayı asla herkese açık bir repoya yüklemeyin*
 
----
