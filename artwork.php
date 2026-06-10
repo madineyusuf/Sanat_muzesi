@@ -1,27 +1,24 @@
 <?php
 require_once 'includes/db.php';
 require_once 'includes/auth.php';
-
 $id = (int)($_GET['id'] ?? 0);
 $stmt = $pdo->prepare("SELECT * FROM eserler WHERE id = ?");
 $stmt->execute([$id]);
 $eser = $stmt->fetch(PDO::FETCH_ASSOC);
 if (!$eser) {
-    header('Location: index.php');
+    header('Location: /~st24360859922/index.php');
     exit;
 }
-
 // Yorum gönderme
 if ($_SERVER['REQUEST_METHOD'] === 'POST' && isLoggedIn()) {
     $icerik = trim($_POST['icerik'] ?? '');
     if ($icerik) {
         $ins = $pdo->prepare("INSERT INTO yorumlar (kullanici_id, eser_id, icerik) VALUES (?, ?, ?)");
         $ins->execute([$_SESSION['kullanici_id'], $id, $icerik]);
-        header("Location: artwork.php?id=$id");
+        header("Location: /~st24360859922/artwork.php?id=$id");
         exit;
     }
 }
-
 // Yorumları çek
 $stmt2 = $pdo->prepare("
     SELECT y.*, k.kullanici_adi
@@ -32,7 +29,6 @@ $stmt2 = $pdo->prepare("
 ");
 $stmt2->execute([$id]);
 $yorumlar = $stmt2->fetchAll(PDO::FETCH_ASSOC);
-
 // Favori durumu
 $favori = false;
 if (isLoggedIn()) {
@@ -42,41 +38,30 @@ if (isLoggedIn()) {
 }
 ?>
 <?php require_once 'includes/header.php'; ?>
-
 <div class="container mt-4 pb-5">
-
-    <a href="index.php" class="btn btn-outline-secondary btn-sm mb-4">
+    <a href="/~st24360859922/index.php" class="btn btn-outline-secondary btn-sm mb-4">
         <i class="bi bi-arrow-left"></i> Geri Dön
     </a>
-
-    <!-- Обернули всю карточку экспоната в один красивый полупрозрачный контейнер -->
     <div class="card border-0 shadow-sm mb-5" style="background: rgba(255, 255, 255, 0.65); backdrop-filter: blur(10px); border-radius: 15px;">
         <div class="card-body p-4 p-md-5">
-            <div class="row g-4 align-items-center"> <!-- g-4 добавит аккуратные зазоры между колонками -->
-                
-                <!-- Левая колонка: Ограничиваем высоту контейнера для картинок, чтобы они не ломали верстку -->
+            <div class="row g-4 align-items-center">
                 <div class="col-md-6">
                     <div style="height: 450px; width: 100%; display: flex; align-items: center; justify-content: center; overflow: hidden; border-radius: 10px;">
-                        <img src="<?= htmlspecialchars($eser['gorsel_yolu'] ?? 'assets/images/placeholder.jpg') ?>"
-                             style="max-height: 100%; max-width: 100%; object-fit: contain;" 
-                             class="shadow-sm" 
+                        <img src="<?= htmlspecialchars($eser['gorsel_yolu'] ?? '/~st24360859922/assets/images/placeholder.jpg') ?>"
+                             style="max-height: 100%; max-width: 100%; object-fit: contain;"
+                             class="shadow-sm"
                              alt="<?= htmlspecialchars($eser['eser_adi']) ?>">
                     </div>
                 </div>
-
-                <!-- Правая колонка: Текстовая информация -->
                 <div class="col-md-6">
                     <h1 class="fw-bold text-dark mb-1"><?= htmlspecialchars($eser['eser_adi']) ?></h1>
                     <p class="text-muted fs-5 mb-2">
                         <?= htmlspecialchars($eser['sanatci']) ?> · <?= htmlspecialchars($eser['yil']) ?>
                     </p>
                     <span class="badge bg-secondary px-3 py-2 mb-4"><?= htmlspecialchars($eser['tur']) ?></span>
-                    
-                    <!-- Текст описания -->
                     <div class="text-secondary lh-lg mb-4" style="font-size: 1.05rem; text-align: justify;">
                         <?= nl2br(htmlspecialchars($eser['aciklama'])) ?>
                     </div>
-
                     <?php if (isLoggedIn()): ?>
                         <button class="btn fav-btn <?= $favori ? 'btn-danger' : 'btn-outline-danger' ?> px-4 py-2"
                                 data-id="<?= $id ?>">
@@ -84,25 +69,20 @@ if (isLoggedIn()) {
                             <span><?= $favori ? 'Favorilerimde' : 'Favorilere Ekle' ?></span>
                         </button>
                     <?php else: ?>
-                        <a href="login.php" class="btn btn-outline-danger px-4 py-2">
+                        <a href="/~st24360859922/login.php" class="btn btn-outline-danger px-4 py-2">
                             <i class="bi bi-heart"></i> Favorilere eklemek için giriş yapın
                         </a>
                     <?php endif; ?>
                 </div>
             </div>
         </div>
-    </div> <!-- Конец карточки экспоната -->
-
-    <!-- Разделитель: Гарантирует, что комментарии начнутся строго СНИЗУ и не наползут на блоки выше -->
+    </div>
     <div class="clearfix"></div>
-
-    <!-- Раздел комментариев (остается на всю ширину контейнера внизу) -->
     <div class="mt-5 pt-3 border-top">
         <button class="btn btn-outline-secondary mb-3" type="button"
                 data-bs-toggle="collapse" data-bs-target="#yorumlar">
             <i class="bi bi-chat-dots"></i> Yorumlar (<?= count($yorumlar) ?>)
         </button>
-
         <div class="collapse" id="yorumlar">
             <?php if (isLoggedIn()): ?>
                 <form method="POST" class="mb-4" style="max-width: 600px;">
@@ -114,14 +94,12 @@ if (isLoggedIn()) {
                 </form>
             <?php else: ?>
                 <p class="text-muted">
-                    <a href="login.php">Giriş yapın</a> ve yorum bırakın.
+                    <a href="/~st24360859922/login.php">Giriş yapın</a> ve yorum bırakın.
                 </p>
             <?php endif; ?>
-
             <?php if (empty($yorumlar)): ?>
                 <p class="text-muted">Henüz yorum yok. İlk yorumu siz yapın!</p>
             <?php endif; ?>
-
             <div style="max-width: 800px;">
                 <?php foreach ($yorumlar as $yorum): ?>
                     <div class="card mb-2 shadow-sm border-0" style="background: rgba(255, 255, 255, 0.8);">
@@ -132,7 +110,7 @@ if (isLoggedIn()) {
                             </div>
                             <p class="mb-2 mt-1 text-secondary"><?= nl2br(htmlspecialchars($yorum['icerik'])) ?></p>
                             <?php if (isLoggedIn() && $_SESSION['kullanici_id'] == $yorum['kullanici_id']): ?>
-                                <a href="api/delete_comment.php?id=<?= $yorum['id'] ?>&eser_id=<?= $id ?>"
+                                <a href="/~st24360859922/api/delete_comment.php?id=<?= $yorum['id'] ?>&eser_id=<?= $id ?>"
                                    class="btn btn-sm btn-link text-danger p-0 text-decoration-none"
                                    onclick="return confirm('Yorumu silmek istediğinizden emin misiniz?')">
                                     <i class="bi bi-trash"></i> Sil
@@ -145,13 +123,11 @@ if (isLoggedIn()) {
         </div>
     </div>
 </div>
-
 <script>
-// Favori toggle
 document.querySelectorAll('.fav-btn').forEach(btn => {
     btn.addEventListener('click', async () => {
         const id = btn.dataset.id;
-        const res = await fetch('api/toggle_favorite.php', {
+        const res = await fetch('/~st24360859922/api/toggle_favorite.php', {
             method: 'POST',
             headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
             body: `eser_id=${id}`
@@ -171,5 +147,4 @@ document.querySelectorAll('.fav-btn').forEach(btn => {
     });
 });
 </script>
-
 <?php require_once 'includes/footer.php'; ?>
