@@ -113,5 +113,4 @@ cp includes/db.example.php includes/db.php
 
 ---
 
-*© BM BTÜ 2026 — Sanat Müzesi *i_adi/repo_adi.git](https://github.com/kullanici_adi/repo_adi.git)
-cd repo_adi
+© BM BTÜ 2026 — Sanat Müzesi 
