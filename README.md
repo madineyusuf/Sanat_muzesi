@@ -4,7 +4,8 @@
 
 ---
 
-> *"Sanat asla bitmez. Sadece terk edilir." 
+> *"Sanat asla bitmez. Sadece terk edilir."
+
 > © Leonardo Da Vinci*
 
 ---
