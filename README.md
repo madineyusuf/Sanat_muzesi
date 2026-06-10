@@ -33,15 +33,15 @@ Dünyanın en ünlü sanat eserlerini keşfedebileceğiniz, kategorilerine göre
 
 ##  Özellikler 
 
-- **Kullanıcı Yönetimi:** Güvenli kayıt olma, giriş yapma ve oturum (Session) yönetimi.
-- **Profil Güncelleme:** Kullanıcıların kendi kullanıcı adlarını ve şifrelerini güncelleyebileceği profil paneli.
-- **Dinamik Listeleme ve Arama:** Sanat eserlerini isme veya sanatçıya göre arama, türlerine göre filtreleme.
-- **Gelişmiş Etkileşim:** - Asenkron (AJAX / Fetch API) çalışan favorilere ekleme ve çıkarma sistemi.
-  - Eserlerin altına yorum yapma ve kullanıcıların yalnızca kendi yorumlarını silebilmesini sağlayan yetkilendirme mekanizması.
+- **Kullanıcı Yönetimi:** Güvenli kayıt olma, giriş yapma ve oturum (Session) yönetimi
+- **Profil Güncelleme:** Kullanıcıların kendi kullanıcı adlarını ve şifrelerini güncelleyebileceği profil paneli
+- **Dinamik Listeleme ve Arama:** Sanat eserlerini isme veya sanatçıya göre arama, türlerine göre filtreleme
+- **Gelişmiş Etkileşim:** - Asenkron (AJAX / Fetch API) çalışan favorilere ekleme ve çıkarma sistemi
+  - Eserlerin altına yorum yapma ve kullanıcıların yalnızca kendi yorumlarını silebilmesini sağlayan yetkilendirme mekanizması
 - **Güvenlik Odaklı Mimari:**
-  - SQL Injection saldırılarına karşı **PDO Prepared Statements** kullanımı.
-  - XSS (Cross-Site Scripting) saldırılarını önlemek için **HTML Purifier / htmlspecialchars** koruması.
-  - Şifrelerin veritabanında güvenli bir şekilde **`password_hash()`** (BCrypt) ile saklanması.
+  - SQL Injection saldırılarına karşı **PDO Prepared Statements** kullanımı
+  - XSS (Cross-Site Scripting) saldırılarını önlemek için **HTML Purifier / htmlspecialchars** koruması
+  - Şifrelerin veritabanında güvenli bir şekilde **`password_hash()`** (BCrypt) ile saklanması
 
 ---
 
@@ -68,7 +68,7 @@ Proje ilişkisel bir veritabanı modeli üzerine kurulmuştur ve 4 temel tabloda
 
 ---
 
-## 🚀 Kurulum ve Çalıştırma 
+## Kurulum ve Çalıştırma 
 
 Projeyi yeral ortamınızda (XAMPP, WampServer vb.) veya bir uzak sunucuda çalıştırmak için aşağıdaki adımları takip edin:
 
