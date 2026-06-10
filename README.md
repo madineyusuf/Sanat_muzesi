@@ -107,10 +107,8 @@ cp includes/db.example.php includes/db.php
 
 ---
 
-## Güvenlik Notları
+### Güvenlik Notları
 
 >  *`includes/db.php` dosyası `.gitignore` ile versiyon kontrolünden hariç tutulmuştur. Bu dosyayı asla herkese açık bir repoya yüklemeyin*
 
 ---
-
-© BM BTÜ 2026 — Sanat Müzesi 
