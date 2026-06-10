@@ -18,10 +18,9 @@
 
 ## Geliştiriciler
 
-| | İsim | Numara |
 |:---:|:---|:---|
 | ☾ | *Madina Yusupova* | 24360859922 |
-| ☼ | *Feyza Yavuz* | 24360859055 |
+| ☀︎ | *Feyza Yavuz* | 24360859055 |
 | ♥︎ | *Nurseza Karakaya* | 24360859038 |
 
 ---
