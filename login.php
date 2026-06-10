@@ -15,7 +15,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     if ($kullanici && password_verify($sifre, $kullanici['sifre_hash'])) {
         $_SESSION['kullanici_id']  = $kullanici['id'];
         $_SESSION['kullanici_adi'] = $kullanici['kullanici_adi'];
-        header('Location: index.php');
+        header('Location: /~st24360859922/index.php');
         exit;
     } else {
         $error = 'Kullanıcı adı veya şifre hatalı.';
@@ -24,7 +24,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 ?>
 <?php require_once 'includes/header.php'; ?>
 
-<main class="flex-grow-1 d-flex align-items-center" style="min-height: 60vh;">
+<main class="flex-grow-1 d-flex align-items-center">
     <div class="container" style="max-width: 450px">
         <h2 class="mb-4">Giriş Yap</h2>
 
@@ -44,7 +44,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             <button type="submit" class="btn btn-primary w-100">Giriş Yap</button>
         </form>
 
-        <p class="mt-3 text-center">Hesabın yok mu? <a href="register.php">Kayıt ol</a></p>
+        <p class="mt-3 text-center">Hesabın yok mu? <a href="/~st24360859922/register.php">Kayıt ol</a></p>
     </div>
 </main>
 
