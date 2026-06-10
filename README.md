@@ -45,7 +45,7 @@
 
 *Bu uygulama, modern bir sanat müzesinin dijital deneyimini sunmak amacıyla geliştirilmiştir*
 
-- **Kullanıcı Yönetimi** — *Güvenli kayıt, giriş ve oturum (Session) yönetimi*
+- **Kullanıcı Yönetimi** — *Güvenli kayıt, giriş ve oturum yönetimi*
 - **Profil Paneli** — *Kullanıcı adı ve şifre güncelleme*
 - **Galeri & Arama** — *Eserleri isme, sanatçıya veya türe göre arama ve filtreleme*
 - **Favoriler** — *AJAX / Fetch API ile asenkron favori ekleme ve çıkarma*
