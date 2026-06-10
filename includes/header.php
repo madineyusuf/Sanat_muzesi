@@ -11,7 +11,7 @@
 <body class="d-flex flex-column min-vh-100">
 <nav class="navbar navbar-expand-lg navbar-light">
     <div class="container">
-        <a class="navbar-brand" href="/~st24360859922/index.php">Sanat Müzesi</a>
+        <a class="navbar-brand" href="/~st24360859922/index.php">▶︎ Sanat Müzesi</a>
         <div class="ms-auto d-flex align-items-center gap-2">
             <?php if (isLoggedIn()): ?>
                 <a href="/~st24360859922/profile.php" class="btn btn-outline-light btn-sm">
