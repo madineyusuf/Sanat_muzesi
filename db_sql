@@ -57,7 +57,7 @@ INSERT INTO eserler (eser_adi, sanatci, yil, tur, aciklama) VALUES
 ("Venus de Milo", "Alexandros of Antioch", "MÖ 100", "Heykel", "Antik Yunan sanatının Helenistik dönemine (MÖ 2. yüzyıl) ait olan ve 1820 yılında Yunanistan’ın Milos Adası’nda keşfedilen Venus de Milo (Milo Venüsü), dünya çapında antik heykel sanatının en tanınmış başyapıtlarından biridir. Yunan aşk tanrıçası Afrodit’i tasvir ettiği kabul edilen ve Parian mermerinden gerçek boyutların üzerinde (2 metreden uzun) yontulan bu ikonik heykel, çıplak üst bedeni ve alt kısmını örten dumanlı kumaş kıvrımlarıyla klasik ve Helenistik üslupları kusursuzca harmanlar. Keşfedildiğinde yanında bir elma tutan mermer el parçası bulunmasına rağmen, iki kolunun da eksik olması nedeniyle orijinal duruşu ve kollarının pozisyonu bugün hâlâ kesin olarak bilinmemektedir. Napolyon Savaşları’nın ardından Paris’teki Louvre Müzesi’nin antik koleksiyonunun temel taşı haline gelen, düzinelerce şiire ve modern sürrealist akıma ilham veren bu anıtsal şaheser, 1821 yılından beri aynı müzede kalıcı olarak sergilenmekte ve gizemli eksikliğiyle hayranlık uyandırmaya devam etmektedir.");
 
 
-ALTER TABLE eserler ADD COLUMN gorsel_yolu VARCHAR(255) DEFAULT NULL;
+
 
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/starry-night.jpg' WHERE eser_adi = 'The Starry Night';
 UPDATE eserler SET gorsel_yolu = 'assets/images/artworks/empire-of-ligth.jpg' WHERE eser_adi = 'The Empire of Light';
